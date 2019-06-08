@@ -155,3 +155,49 @@ Track a day in a few words - An analyzer of your time utilization.
   }
 }
 ```
+
+### Final Data Sctructure
+
+```json
+{
+  "dailyData": {
+    "2019": {
+      "6": {
+        "8": {
+          "subject": {
+            "subject1": 0.4,
+            "subject2": "2h"
+          },
+          "isWorkday": false
+        }
+      }
+    }
+  },
+  "settings": {
+    "expectAvailableTime": {
+      "workday": "",
+      "nonworkday": "",
+      "formula": {
+        "workday": {
+          "workHours": 8,
+          "commuteHours": 3,
+          "sleepHours": 8,
+          "expectUsage": 0.8
+        },
+        "nonWorkday": {
+          "fixedHours": 4,
+          "sleepHours": 8,
+          "expectUsage": 1
+        }
+      }
+    },
+    "days": {
+      "workday": [0, 1, 2, 3, 4],
+      "nonWorkday": [5, 6],
+      "specialDays": {
+        "2019/6/8": false
+      }
+    }
+  }
+}
+```
