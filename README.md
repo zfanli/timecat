@@ -52,7 +52,7 @@ Track a day in a few words - An analyzer of your time utilization.
 
 最终反映到数据上，每天的信息应该是这样的：
 
-```json
+```jsonc
 {
   "2019/6/8": {
     "subject": {
@@ -66,7 +66,7 @@ Track a day in a few words - An analyzer of your time utilization.
 
 可以得出结构如下。
 
-```json
+```jsonc
 {
   "时间": {
     "主题": {
@@ -110,7 +110,7 @@ Track a day in a few words - An analyzer of your time utilization.
 
 关于预期可利用时间的设置数据结构如下。
 
-```json
+```jsonc
 {
   "expectAvailableTime": {
     "workday": "",
@@ -142,7 +142,7 @@ Track a day in a few words - An analyzer of your time utilization.
 
 这部分设置数据应该如下。
 
-```json
+```jsonc
 {
   // 默认周一到周五是工作日
   "workday": [0, 1, 2, 3, 4],
