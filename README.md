@@ -78,6 +78,26 @@ Track a day in a few words - An analyzer of your time utilization.
 }
 ```
 
+### 额外的
+
+上面针对业余时间的使用，但是工作时间是占我们生活的大部分时间的，对于工作时间如何科学的评估（或者是否需要加入这样的功能）都在商榷中。目前的想法是仅记录下面这些信息。
+
+工作中是否有所收获：对每日的工作进行评估，只储存两种结果，有或者没有。这样在一段区间的分析上能告诉你有收获的工作占多少百分比。
+
+工作是否顺心：对每日工作状态评估，有开心、平常、生气三种结果。这样可以告诉你一段时间内你的心情状态，分析是否应该重新考虑下一工作了。
+
+最后则是可选的备注项目：如果这天有收获，或者这天异常生气，可以选择做一个小备注记录这些关键的信息，这样在回顾的时候就可以知道这天发生了什么，或许可以帮助你进行更有用的分析。
+
+可能是下面的数据结构。
+
+```json
+{
+  "hasGains": true,
+  "mood": "good",
+  "comment": "Short comment about the day"
+}
+```
+
 另外，每日的数据需要配合设置的支持。对设置来说需要提供下面的信息。
 
 ### 预期可利用时间
@@ -168,7 +188,12 @@ Track a day in a few words - An analyzer of your time utilization.
             "subject1": 0.4,
             "subject2": "2h"
           },
-          "isWorkday": false
+          "isWorkday": false,
+          "extra": {
+            "hasGains": true,
+            "mood": "good",
+            "comment": "Short comment about the day"
+          }
         }
       }
     }
