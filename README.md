@@ -1,8 +1,10 @@
 # timecat
 
-Track a day in a few words - An analyzer of your time utilization.
+Manage your daily fragmentary time in a few words. (WIP)
 
-一句话搞定日常记录，一个工具用来分析你的时间利用率。
+An analyzer of your time utilization.
+
+一句话管理你的日常碎片时间 - 一个工具分析你的时间利用率。
 
 ## idea
 
