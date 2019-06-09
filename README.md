@@ -182,6 +182,22 @@ An analyzer of your time utilization.
 }
 ```
 
+### 主题相关设置
+
+也许每日用户录入的主题并不是都是有效的利用，如游戏，娱乐等。在设置中需要一个选项来对所有的主题进行分类。设计上默认所有主题都是有效利用的，用户需要将不计算为有效利用的主题选择出来。这些被选出来的无效利用的主题将影响分析的表示，分析数据中它们不再作为对时间有效利用的部分被统计，但是在无效利用部分会标记出来。
+
+> R：或许应该单独把娱乐利用时间分出来，毕竟娱乐也算生活的一部分，如果只将时间分为有效和无效太过于机械区分了，不够人性化。或许应该分为有效利用，娱乐利用和无效利用。那些既没有带来好处，也没用来娱乐的时间是应该杜绝的。这点如何设计，再议。
+
+```jsonc
+{
+  "isInefficientUsage": [
+    "subject1",
+    "subject2"
+    // ...
+  ]
+}
+```
+
 ### Final Data Sctructure
 
 ```json
@@ -228,6 +244,9 @@ An analyzer of your time utilization.
       "specialDays": {
         "2019/6/8": false
       }
+    },
+    "subjects": {
+      "isInefficientUsage": ["subject1", "subject2"]
     }
   }
 }
